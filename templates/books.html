@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Список книг</h1>
+ <a href="{{url_for('newBook')}}">
+   <button>Добавить книгу</button>
+ </a>
+ <ol>
+   {% for book in books %}
+    <li> {{book.author}} - {{book.title}} </li>
+    <a href="{{url_for('editBook', book_id = book.id )}}">
+      Изменить
+    </a>
+    <a href="{{url_for('deleteBook', book_id = book.id )}}" style="margin-left: 10px;">
+      Удалить
+    </a>
+    <br> <br>
+  {% endfor %}
+ </ol>
+</body>
+</html>

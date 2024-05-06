@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="{{ url_for('editBook',book_id = book.id)}}" method="post">
+  <div class="form-group">
+    <label for="name">Название:</label>
+    <input type="text" class="form-control" name="name" value="{{book.title }}">
+    <input type="text" class="form-control" name="author" value="{{book.author }}">
+    <input type="text" class="form-control" name="genre" value="{{book.genre }}">
+    <button type="submit"> Обновить</button>
+    <a href='{{ url_for('showBooks') }}'>
+      <button>Отменить</button>
+    </a>
+  </div>
+</form>
+
+</body>
+</html>
