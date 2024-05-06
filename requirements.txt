@@ -1,0 +1,4 @@
+Flask-RESTful
+flask
+SQLAlchemy-serializer
+SQLAlchemy
